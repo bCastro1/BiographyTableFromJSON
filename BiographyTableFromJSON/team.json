@@ -1,0 +1,35 @@
+[
+  {
+    "avatar": "https://a3-images.myspacecdn.com/images03/1/240e42b5d9ce48a78983961e7fcb3c39/600x600.jpg",
+    "bio": "Thomas Anderson is the American co-founder of the social networking website Myspace, which he founded in 2003 with Chris DeWolfe. He was later president of Myspace and a strategic adviser for the company until he left in 2009.",
+    "firstName": "Thomas",
+    "id": "0",
+    "lastName": "Anderson",
+    "title": "MySpace Founder"
+  },
+ {
+ "avatar": "https://upload.wikimedia.org/wikipedia/en/b/b9/Ootp076.jpg",
+ "bio": "Severus Snape is a fictional character in J. K. Rowling's Harry Potter series. He is characterised as a person of great complexity, whose coldly sarcastic and controlled exterior conceals deep emotions and anguish.",
+ "firstName": "Severus",
+ "id": "1",
+ "lastName": "Snape",
+ "title": "Potions Master"
+ },
+ {
+ "avatar": "https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Michael_Bluth.jpg/250px-Michael_Bluth.jpg",
+ "bio": "Michael Bluth is a fictional character who is both the protagonist and the straight man of the American television sitcom Arrested Development, created by Mitchell Hurwitz. Portrayed by Jason Bateman, Bluth's role in the narrative is to lead his family through its many crises.",
+ "firstName": "Michael",
+ "id": "2",
+ "lastName": "Bluth",
+ "title": "CEO and President"
+ },
+ {
+ "avatar": "https://lh6.googleusercontent.com/-2lJYGtfXKwQ/AAAAAAAAAAI/AAAAAAAB2HQ/QSmIw0nQN_c/s0-c-k-no-ns/photo.jpg",
+ "bio": "Barack Hussein Obama II is an American politician who served as the 44th President of the United States from 2009 to 2017. He is the first African American to have served as president, as well as the first born outside the contiguous United States.",
+ "firstName": "Barack",
+ "id": "3",
+ "lastName": "Obama",
+ "title": "Former President of the USA"
+ }
+ 
+]

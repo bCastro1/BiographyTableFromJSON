@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D6EFC39C1E770A3F003EDE19"
+               BuildableName = "BiographyTableFromJSON.app"
+               BlueprintName = "BiographyTableFromJSON"
+               ReferencedContainer = "container:BiographyTableFromJSON.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D6EFC3B01E770A40003EDE19"
+               BuildableName = "BiographyTableFromJSONTests.xctest"
+               BlueprintName = "BiographyTableFromJSONTests"
+               ReferencedContainer = "container:BiographyTableFromJSON.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D6EFC3BB1E770A40003EDE19"
+               BuildableName = "BiographyTableFromJSONUITests.xctest"
+               BlueprintName = "BiographyTableFromJSONUITests"
+               ReferencedContainer = "container:BiographyTableFromJSON.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D6EFC39C1E770A3F003EDE19"
+            BuildableName = "BiographyTableFromJSON.app"
+            BlueprintName = "BiographyTableFromJSON"
+            ReferencedContainer = "container:BiographyTableFromJSON.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D6EFC39C1E770A3F003EDE19"
+            BuildableName = "BiographyTableFromJSON.app"
+            BlueprintName = "BiographyTableFromJSON"
+            ReferencedContainer = "container:BiographyTableFromJSON.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D6EFC39C1E770A3F003EDE19"
+            BuildableName = "BiographyTableFromJSON.app"
+            BlueprintName = "BiographyTableFromJSON"
+            ReferencedContainer = "container:BiographyTableFromJSON.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
