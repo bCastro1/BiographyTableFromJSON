@@ -10,6 +10,8 @@ import UIKit
 
 class MainDisplayTableViewController: UITableViewController {
     
+    var userPictureLinks: [String] = []
+    var userPictures: [UIImage] = []
     var thumbnailPictures:[UIImage] = []
     var detailedMemberPictures:[UIImage] = []
     let singleMemberViewController = SingleMemberInfoViewController()
@@ -18,11 +20,8 @@ class MainDisplayTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.title = "Member Biographies"
         tableView.register(TeamMemberCell.self, forCellReuseIdentifier: "teamMemberCell")
-        getMemberAvatars()
-        
-        //cropping images for future use
-        resizeThumbnailPictures()
-        resizeMemberInfoPictures()
+        //getMemberAvatars()
+        print("teammeber: count: :: \(singleton.teamMember.count)")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,7 +32,8 @@ class MainDisplayTableViewController: UITableViewController {
         var cell = tableView.dequeueReusableCell(withIdentifier: "teamMemberCell", for: indexPath) as! TeamMemberCell
         cell.nameLabel.text = singleton.teamMember[indexPath.row].firstName
         cell.titleLabel.text = singleton.teamMember[indexPath.row].jobTitle
-        cell.memberImage.image = thumbnailPictures[indexPath.row]
+        //cell.memberImage.image = thumbnailPictures[indexPath.row]
+        cell.memberImage.downloadedFrom(link: singleton.teamMember[indexPath.row].avatar)
         return cell
     }
     
@@ -42,33 +42,13 @@ class MainDisplayTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        singleMemberViewController.memberImage.image = self.detailedMemberPictures[indexPath.row]
+        singleMemberViewController.memberImage.downloadedFrom(link: singleton.teamMember[indexPath.row].avatar)
         singleMemberViewController.memberName.text = "\(singleton.teamMember[indexPath.row].firstName) \(singleton.teamMember[indexPath.row].lastName)"
         singleMemberViewController.memberTitle.text = "\(singleton.teamMember[indexPath.row].jobTitle)"
         singleMemberViewController.memberBio.text = "\(singleton.teamMember[indexPath.row].bio)"
         self.present(singleMemberViewController, animated: true, completion: nil)
     }
     
-    func resizeThumbnailPictures()
-    {
-        for index in 0...singleton.teamMember.count-1
-        {
-            var resizedImage = UIImage()
-            resizedImage = resizeImageBasedOnParameterHeight(80, image: ImageCache.shared[index as AnyObject]!)!
-            thumbnailPictures.append(resizedImage)
-        }
-    }
-    
-    func resizeMemberInfoPictures()
-    {
-        let memberPictureBasedOnScreenSize = self.view.frame.width - 120
-        for index in 0...singleton.teamMember.count-1
-        {
-            var resizedImage = UIImage()
-            resizedImage = resizeImageBasedOnParameterHeight(memberPictureBasedOnScreenSize, image: ImageCache.shared[index as AnyObject]!)!
-            detailedMemberPictures.append(resizedImage)
-        }
-    }
 }
 
 

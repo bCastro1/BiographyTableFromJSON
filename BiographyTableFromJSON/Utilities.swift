@@ -16,43 +16,6 @@ class MemberClass{
 
 var singleton = MemberClass.sharedMemberInfo
 
-
-final class ImageCache: NSCache<AnyObject, UIImage> {
-    
-    static let shared = ImageCache()
-    private var memoryWarningObserver: NSObjectProtocol!
-    // Add observer to purge cache upon memory pressure.
-    
-    private override init() {
-        super.init()
-        
-        memoryWarningObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationDidReceiveMemoryWarning, object: nil, queue: nil) { notification in
-            self.removeAllObjects()
-        }
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(memoryWarningObserver)
-    }
-    
-    // Subscript operation to retrieve and update
-    
-    subscript(key: AnyObject) -> UIImage? {
-        get {
-            return object(forKey: key)
-        }
-        
-        set (newValue) {
-            if let object = newValue {
-                setObject(object, forKey: key)
-            } else {
-                removeObject(forKey: key)
-            }
-        }
-    }
-    
-}
-
 func resizeImageBasedOnParameterHeight(_ height: CGFloat, image: UIImage) ->UIImage?
 {
     //new height based on the image view bounds

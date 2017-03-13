@@ -107,17 +107,12 @@
 		D6EFC39F1E770A3F003EDE19 /* BiographyTableFromJSON */ = {
 			isa = PBXGroup;
 			children = (
-				D6EFC3A01E770A3F003EDE19 /* AppDelegate.swift */,
+				D6EFC3DA1E77449D003EDE19 /* Supporting Files */,
 				D6EFC3A21E770A3F003EDE19 /* ViewController.swift */,
-				D6EFC3A71E770A3F003EDE19 /* Assets.xcassets */,
 				D6EFC3A91E770A3F003EDE19 /* LaunchScreen.storyboard */,
-				D6EFC3AC1E770A3F003EDE19 /* Info.plist */,
-				D6EFC3CE1E770A9D003EDE19 /* team.json */,
 				D6EFC3D01E770ABF003EDE19 /* MemberInformation.swift */,
 				D6EFC3D21E770B20003EDE19 /* SingleMemberInfoViewController.swift */,
-				D6EFC3D31E770B20003EDE19 /* SwiftyJSON.swift */,
 				D6EFC3D41E770B20003EDE19 /* TeamMemberCell.swift */,
-				D6EFC3D51E770B20003EDE19 /* Utilities.swift */,
 			);
 			path = BiographyTableFromJSON;
 			sourceTree = "<group>";
@@ -138,6 +133,19 @@
 				D6EFC3C21E770A40003EDE19 /* Info.plist */,
 			);
 			path = BiographyTableFromJSONUITests;
+			sourceTree = "<group>";
+		};
+		D6EFC3DA1E77449D003EDE19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6EFC3A01E770A3F003EDE19 /* AppDelegate.swift */,
+				D6EFC3A71E770A3F003EDE19 /* Assets.xcassets */,
+				D6EFC3AC1E770A3F003EDE19 /* Info.plist */,
+				D6EFC3CE1E770A9D003EDE19 /* team.json */,
+				D6EFC3D31E770B20003EDE19 /* SwiftyJSON.swift */,
+				D6EFC3D51E770B20003EDE19 /* Utilities.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,6 +525,7 @@
 				D6EFC3C71E770A40003EDE19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6EFC3C81E770A40003EDE19 /* Build configuration list for PBXNativeTarget "BiographyTableFromJSONTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +534,7 @@
 				D6EFC3CA1E770A40003EDE19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6EFC3CB1E770A40003EDE19 /* Build configuration list for PBXNativeTarget "BiographyTableFromJSONUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +543,7 @@
 				D6EFC3CD1E770A40003EDE19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

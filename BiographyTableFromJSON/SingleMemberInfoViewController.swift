@@ -89,14 +89,15 @@ class SingleMemberInfoViewController: UIViewController {
     //foreground
 
     func setupView(){
-        self.view.addSubview(visualEffectView)          //v0
+        self.view.addSubview(visualEffectView)
+        visualEffectView.addSubview(dissmissView)//v0
         visualEffectView.addSubview(memberScrollView)   //v1
         memberScrollView.addSubview(memberImage)        //v2
         memberScrollView.addSubview(memberName)         //v3
         memberScrollView.addSubview(memberTitle)        //v4
         memberScrollView.addSubview(memberBio)          //v5
         visualEffectView.addSubview(backLabel)          //v6
-        visualEffectView.addSubview(dissmissView)
+
         
         //blur effect on whole background screen
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[v0]-0-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0":visualEffectView]))
@@ -117,7 +118,8 @@ class SingleMemberInfoViewController: UIViewController {
         
         //image centered in top portion of popup
         memberScrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-15-[v2]-15-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v2":memberImage]))
-        memberScrollView.addConstraint(addNSLayoutConstraint(containingView: memberImage, attribute: .centerX, item: memberScrollView))
+        let centerImage = NSLayoutConstraint(item: memberImage, attribute: .centerXWithinMargins, relatedBy: .equal, toItem: memberScrollView, attribute: .centerXWithinMargins, multiplier: 1, constant: 0)
+        self.view.addConstraint(centerImage)
         
         //name, title, bio all have same margin padding
         memberScrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-15-[v3]-15-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v3":memberName]))
@@ -127,7 +129,7 @@ class SingleMemberInfoViewController: UIViewController {
         memberScrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-15-[v5]-15-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v5":memberBio]))
 
         //name, title, bio vertical spacing
-        memberScrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-15-[v2]-15-[v3]-15-[v4]-15-[v5]-15-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v2":memberImage, "v3":memberName, "v4":memberTitle,"v5":memberBio]))
+        memberScrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-15-[v2(270)]-15-[v3]-15-[v4]-15-[v5]-15-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v2":memberImage, "v3":memberName, "v4":memberTitle,"v5":memberBio]))
         
     }
     
